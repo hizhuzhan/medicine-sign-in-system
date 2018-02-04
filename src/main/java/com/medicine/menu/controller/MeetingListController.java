@@ -32,4 +32,9 @@ public class MeetingListController {
         List<MeetingListDO> list = sysMeetingListService.listAll();
         return "";
     }
+
+    @RequestMapping("/add")
+    public String add(){
+        return prefix + "/add";
+    }
 }

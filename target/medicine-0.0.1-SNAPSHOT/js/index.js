@@ -1,10 +1,9 @@
 var $,tab;
 layui.config({
 	base : "js/"
-}).use(['bodyTab','form','element','layer','jquery'],function(){
-	var form = layui.form(),
-		layer = layui.layer,
-		element = layui.element();
+}).use(['bodyTab','element','layer','jquery'],function(){
+	var layer = layui.layer,
+		element = layui.element;
 		$ = layui.jquery;
 		tab = layui.bodyTab({
 			openTabNum : "50",  //最大可打开窗口数量

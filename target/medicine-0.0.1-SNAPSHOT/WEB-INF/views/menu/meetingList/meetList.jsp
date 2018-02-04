@@ -3,8 +3,8 @@
 <body class="childrenBody">
 <div class="layui-row">
 	<div class="layui-col-md12">
-		<button class="layui-btn">增加</button>
-		<button class="layui-btn">删除</button>
+		<button id="add" class="layui-btn">增加</button>
+		<button id="batchRemove" class="layui-btn">删除</button>
 	</div>
 </div>
 <div class="layui-row">
@@ -15,6 +15,7 @@
 
 </body>
 <%@ include file="/WEB-INF/views/common/include_foot.jsp" %>
+<script type="text/javascript" src="<%=request.getContextPath() %>/js/meetingList/meetingList.js"></script>
 <script>
     layui.use('table', function(){
         var table = layui.table;
