@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.medicine.menu.dao.MeetingListDao" >
+  <resultMap id="BaseResultMap" type="com.medicine.menu.domain.MeetingListDO" >
+    <id column="MEETING_ID" property="meetingId" jdbcType="VARCHAR" />
+    <result column="MEETING_NAME" property="meetingName" jdbcType="VARCHAR" />
+    <result column="CTEATE_TIME" property="cteateTime" jdbcType="TIMESTAMP" />
+    <result column="LAST_MODIFY_TIME" property="lastModifyTime" jdbcType="TIMESTAMP" />
+    <result column="METTING_START_TIME" property="mettingStartTime" jdbcType="TIMESTAMP" />
+    <result column="METTING_SIT" property="mettingSit" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="MeetingList_Column_List" >
+    MEETING_ID, MEETING_NAME, CTEATE_TIME, LAST_MODIFY_TIME, METTING_START_TIME, METTING_SIT
+  </sql>
+  <select id="listAll" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="MeetingList_Column_List" />
+    from data_meeting_list
+  </select>
+
+</mapper>

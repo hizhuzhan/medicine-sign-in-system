@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.medicine.menu.dao.MenuDao" >
+    <resultMap id="MenuDO" type="com.medicine.menu.domain.MenuDO" >
+        <id column="MENU_ID" property="menuId" jdbcType="VARCHAR" />
+        <result column="TITLE" property="title" jdbcType="VARCHAR" />
+        <result column="ICON" property="icon" jdbcType="VARCHAR" />
+        <result column="HREF" property="href" jdbcType="VARCHAR" />
+        <result column="SPREAD" property="spread" jdbcType="BIT" />
+        <result column="CHILDREN" property="children" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="Menu_Column_List" >
+        MENU_ID, TITLE, ICON, HREF, SPREAD, CHILDREN
+    </sql>
+    <select id="getALlMenu" resultMap="MenuDO" parameterType="java.lang.String" >
+        select
+        <include refid="Menu_Column_List" />
+        from sys_menu
+    </select>
+
+</mapper>
