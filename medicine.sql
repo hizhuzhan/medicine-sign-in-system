@@ -40,13 +40,13 @@ CREATE TABLE SYS_MENU (
   `MENU_ID` VARCHAR(50) PRIMARY KEY NOT NULL, #唯一Id
   `TITLE` VARCHAR(50), #标题
   `ICON` VARCHAR(50), #图标
-  `HREG` VARCHAR(255), #连接
+  `HREF` VARCHAR(255), #连接
   `SPREAD` BOOLEAN, #初始化时是否展开
   `CHILDREN` VARCHAR(1000) #下级子节点
 );
 #MENU VALUES
-INSERT INTO SYS_MENU VALUES (`1`, `首页`, `icon-computer`, `test`, `false`, `[]`);
-INSERT INTO SYS_MENU VALUES (`2`, `添加会议`, `icon-computer`, `test`, `false`, `[]`);
-INSERT INTO SYS_MENU VALUES (`3`, `进行签到`, `icon-computer`, `test`, `false`, `[]`);
-INSERT INTO SYS_MENU VALUES (`4`, `签到状态`, `icon-computer`, `test`, `false`, `[]`);
-INSERT INTO SYS_MENU VALUES (`5`, `会议统计`, `icon-computer`, `test`, `false`, `[]`);
+INSERT INTO SYS_MENU VALUES ('1', '首页', 'icon-computer', 'test', false, '');
+INSERT INTO SYS_MENU VALUES ('2', '添加会议', 'icon-computer', 'test', false, '');
+INSERT INTO SYS_MENU VALUES ('3', '进行签到', 'icon-computer', 'test', false, '');
+INSERT INTO SYS_MENU VALUES ('4', '签到状态', 'icon-computer', 'test', false, '');
+INSERT INTO SYS_MENU VALUES ('5', '会议统计', 'icon-computer', 'test', false, '');

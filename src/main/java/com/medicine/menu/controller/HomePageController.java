@@ -1,19 +1,22 @@
 package com.medicine.menu.controller;
 
 import com.medicine.menu.dao.MenuDao;
+import com.medicine.menu.domain.MenuDO;
+import com.medicine.menu.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/homePage")
 public class HomePageController {
     private String prefix = "";
 
-
     @Autowired
-    private MenuDao sysMenuDao;
+    private MenuService sysMenuService;
 
     /**
      * 返回 <主页面>
@@ -32,7 +35,7 @@ public class HomePageController {
      */
     @RequestMapping("/menuList")
     @ResponseBody
-    public Object menuList(){
-        return sysMenuDao.getALlMenu();
+    public List<MenuDO> menuList(){
+        return sysMenuService.getAllMenu();
     }
 }

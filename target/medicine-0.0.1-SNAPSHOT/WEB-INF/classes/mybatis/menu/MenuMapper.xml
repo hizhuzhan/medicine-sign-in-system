@@ -12,7 +12,7 @@
     <sql id="Menu_Column_List" >
         MENU_ID, TITLE, ICON, HREF, SPREAD, CHILDREN
     </sql>
-    <select id="getALlMenu" resultMap="MenuDO" parameterType="java.lang.String" >
+    <select id="getAllMenu" resultMap="MenuDO" parameterType="java.lang.String" >
         select
         <include refid="Menu_Column_List" />
         from sys_menu
